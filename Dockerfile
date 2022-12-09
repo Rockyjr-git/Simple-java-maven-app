@@ -1,5 +1,2 @@
-FROM openjdk:8
-
-COPY  target/*.jar  myapp.jar
-
-ENTRYPOINT  [ "java" , "-jar" ,  "myapp.jar"  ]
+FROM busybox:latest
+MAINTAINER Pravin-jr
