@@ -1,2 +1,3 @@
 FROM nginx
-LABEL Pravin-Humana
+COPY index.html /usr/share/nginx/html/
+EXPOSE 8081
