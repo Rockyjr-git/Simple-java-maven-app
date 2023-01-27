@@ -15,12 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Log into registry
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Log into registry
+      #uses: docker/login-action@v1
+      #with:
+        #registry: ghcr.io
+        #username: ${{ github.actor }}
+        #password: ${{ secrets.GITHUB_TOKEN }}
         
     #- name: Build the Docker image
       #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
@@ -28,8 +28,8 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & push Docker image
       with:
-        image: repo/image
-        tags: v1, latest
+        image: back-office/back-office-frontend
+        tags: v1
         registry: ghcr.io
         dockerfile: Dockerfile
         username: ${{ github.actor }}
