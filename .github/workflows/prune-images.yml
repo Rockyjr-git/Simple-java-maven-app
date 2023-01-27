@@ -20,7 +20,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         #organization: your-org
-        container: repo
+        container: repo/image
         dry-run: true # Dry-run first, then change to `false`
         keep-younger-than: 0 # days
         keep-last: 1
