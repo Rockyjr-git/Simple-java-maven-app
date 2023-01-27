@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-   
+         
     - name: Prune
       uses: vlaurin/action-ghcr-prune@v0.5.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         #organization: your-org
-        container: repo/image
+        container: repo/image-v3
         dry-run: false # Dry-run first, then change to `false`
         keep-younger-than: 0 # days
         keep-last: 1
