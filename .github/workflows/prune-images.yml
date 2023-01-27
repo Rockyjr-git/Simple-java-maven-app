@@ -27,7 +27,7 @@ jobs:
         #prune-untagged: true
         keep-tags-regexes: v3
         prune-tags-regexes: |
-          ^v1
-          ^latest
+          v1
+          v2
         
         
