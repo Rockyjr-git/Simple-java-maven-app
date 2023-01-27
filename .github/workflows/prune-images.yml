@@ -24,4 +24,10 @@ jobs:
         dry-run: false # Dry-run first, then change to `false`
         keep-younger-than: 0 # days
         keep-last: 1
-        prune-untagged: true
+        #prune-untagged: true
+        keep-tags-regexes: v3
+        prune-tags-regexes: |
+          ^v1
+          ^latest
+        
+        
