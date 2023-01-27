@@ -27,7 +27,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: repo/image
-        tags: v2
+        tags: v3
         registry: ghcr.io
         dockerfile: Dockerfile
         username: ${{ github.actor }}
