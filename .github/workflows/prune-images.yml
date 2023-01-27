@@ -22,12 +22,11 @@ jobs:
         #organization: your-org
         container: repo/image
         dry-run: false # Dry-run first, then change to `false`
-        keep-younger-than: 1 # days
-        keep-last: 1
+        #keep-younger-than: 1 # days
+        #keep-last: 1
         #prune-untagged: true
         #keep-tags-regexes: v3
-        #prune-tags-regexes: |
-          #v1
-          #v2
+        prune-tags-regexes: |
+          ^pr-
         
         
