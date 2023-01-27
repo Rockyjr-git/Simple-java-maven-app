@@ -25,11 +25,13 @@ jobs:
     #- name: Build the Docker image
       #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       
-    - name: Build and push Docker image
-      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
       with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          context: .
-          push: true
-          tags: v1
-          #labels: ${{ steps.meta.outputs.labels }}  
+        image: repo/image
+        tags: v1, latest
+        registry: ghcr.io
+        dockerfile: Dockerfile
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      
