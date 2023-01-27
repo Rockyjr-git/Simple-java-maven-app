@@ -19,8 +19,8 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: Rockyjr-git
-        password: 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
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
